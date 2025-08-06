@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/homecourt-spa/static/css/main.0c10ad9e.css",
-    "main.js": "/homecourt-spa/static/js/main.a8d6a25b.js",
+    "main.css": "/homecourt-spa/static/css/main.30ca05e6.css",
+    "main.js": "/homecourt-spa/static/js/main.e4e35bbd.js",
     "static/js/453.cc7d6627.chunk.js": "/homecourt-spa/static/js/453.cc7d6627.chunk.js",
     "index.html": "/homecourt-spa/index.html",
-    "main.0c10ad9e.css.map": "/homecourt-spa/static/css/main.0c10ad9e.css.map",
-    "main.a8d6a25b.js.map": "/homecourt-spa/static/js/main.a8d6a25b.js.map",
+    "main.30ca05e6.css.map": "/homecourt-spa/static/css/main.30ca05e6.css.map",
+    "main.e4e35bbd.js.map": "/homecourt-spa/static/js/main.e4e35bbd.js.map",
     "453.cc7d6627.chunk.js.map": "/homecourt-spa/static/js/453.cc7d6627.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c10ad9e.css",
-    "static/js/main.a8d6a25b.js"
+    "static/css/main.30ca05e6.css",
+    "static/js/main.e4e35bbd.js"
   ]
 }
