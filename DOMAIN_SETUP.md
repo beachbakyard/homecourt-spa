@@ -1,16 +1,16 @@
-# Custom Domain Setup - beachbakyard.com
+# Custom Domain Setup - bakyardxhomecourt.com
 
 ## GitHub Pages Configuration
 
 1. **Repository Settings:**
    - Go to repository Settings → Pages
    - Source: Deploy from a branch (gh-pages)
-   - Custom domain: `beachbakyard.com`
+   - Custom domain: `bakyardxhomecourt.com`
    - Enforce HTTPS: ✅ Enabled
 
 ## DNS Configuration
 
-### Option 1: If you own beachbakyard.com domain
+### Option 1: If you own bakyardxhomecourt.com domain
 
 Configure DNS records with your domain registrar:
 
@@ -29,17 +29,17 @@ Value: 185.199.111.153
 
 ### Option 2: Alternative domain options
 
-If `beachbakyard.com` is not available, consider:
-- `beachbakyard.org`
-- `homecourtbakyard.com`
-- `beachvolleyballbakyard.com`
-- `bkyardvolleyball.com`
+If `bakyardxhomecourt.com` is not available, consider:
+- `bakyardxhomecourt.org`
+- `bakyardhomecourt.com`
+- `homecourt-bakyard.com`
+- `bkyardxhc.com`
 
 ## Custom Domain Verification
 
 1. Add TXT record to DNS:
 ```
-Name: _github-challenge-beachbakyard
+Name: _github-challenge-bakyardxhomecourt
 Value: [GitHub provides this value]
 ```
 
@@ -47,7 +47,7 @@ Value: [GitHub provides this value]
 
 ## Current Configuration
 
-✅ CNAME file created: `beachbakyard.com`
+✅ CNAME file created: `bakyardxhomecourt.com`
 ✅ Package.json homepage updated
 ✅ 404.html for SPA routing
 ✅ Index.html GitHub Pages SPA script
@@ -56,9 +56,9 @@ Value: [GitHub provides this value]
 ## Testing URLs
 
 After DNS propagation (24-48 hours):
-- **Primary:** https://beachbakyard.com
-- **Register:** https://beachbakyard.com/tournament
-- **Lessons:** https://beachbakyard.com/schedule
+- **Primary:** https://bakyardxhomecourt.com
+- **Register:** https://bakyardxhomecourt.com/tournament
+- **Lessons:** https://bakyardxhomecourt.com/schedule
 
 ## Fallback URLs (current)
 
