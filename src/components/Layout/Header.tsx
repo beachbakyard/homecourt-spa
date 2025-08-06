@@ -16,10 +16,10 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-blue-900 text-white shadow-lg fixed w-full top-0 z-50">
+    <header className="bg-teal-ocean text-beach-white shadow-lg fixed w-full top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold">
+          <Link to="/" className="text-2xl font-headline font-bold">
             Home Court Series
           </Link>
 
@@ -29,8 +29,8 @@ const Header: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`hover:text-blue-200 transition-colors duration-300 ${
-                  location.pathname === item.path ? 'text-yellow-400' : ''
+                className={`font-body hover:text-sand-yellow transition-colors duration-300 ${
+                  location.pathname === item.path ? 'text-sand-yellow font-semibold' : ''
                 }`}
               >
                 {item.label}
@@ -60,8 +60,8 @@ const Header: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`block py-2 px-4 hover:bg-blue-800 rounded transition-colors duration-300 ${
-                  location.pathname === item.path ? 'bg-blue-800 text-yellow-400' : ''
+                className={`block py-2 px-4 font-body hover:bg-sunset-orange rounded transition-colors duration-300 ${
+                  location.pathname === item.path ? 'bg-sunset-orange text-sand-yellow font-semibold' : ''
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >

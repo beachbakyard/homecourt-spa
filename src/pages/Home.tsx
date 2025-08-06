@@ -5,15 +5,15 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+      <section className="bg-gradient-to-br from-teal-ocean via-sunset-orange to-sand-yellow text-night-sky py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md:text-6xl font-headline font-bold mb-6">
             Home Court Series
           </h1>
-          <h2 className="text-2xl md:text-3xl mb-8 text-blue-200">
+          <h2 className="text-2xl md:text-3xl mb-8 font-headline text-night-sky/80">
             Premier Beach Volleyball Tournaments
           </h2>
-          <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed font-body">
             FIVB-Style King of the Court tournaments featuring maximum competition 
             with minimal downtime. Join us for high-level play in the Dallas-Fort Worth area.
           </p>
@@ -21,13 +21,13 @@ const Home: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               to="/tournaments"
-              className="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors duration-300"
+              className="bg-sand-yellow text-night-sky px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-sunset-orange hover:text-beach-white transition-colors duration-300"
             >
               Open Tournaments
             </Link>
             <Link
               to="/juniors"
-              className="bg-green-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-400 transition-colors duration-300"
+              className="bg-sunset-orange text-beach-white px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-teal-ocean transition-colors duration-300"
             >
               Junior Tournaments
             </Link>
@@ -36,47 +36,47 @@ const Home: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-beach-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Why Choose Home Court Series?</h2>
-            <p className="text-xl text-gray-600">Experience the best beach volleyball competition in Texas</p>
+            <h2 className="text-4xl font-headline font-bold text-night-sky mb-4">Why Choose Home Court Series?</h2>
+            <p className="text-xl font-body text-night-sky/70">Experience the best beach volleyball competition in Texas</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-teal-ocean/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-10 h-10 text-teal-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">High-Level Competition</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl font-headline font-bold text-night-sky mb-4">High-Level Competition</h3>
+              <p className="font-body text-night-sky/70">
                 FIVB-style King of the Court format ensures maximum playing time and competitive matches
               </p>
             </div>
             
             <div className="text-center">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-sunset-orange/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-10 h-10 text-sunset-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Minimal Downtime</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl font-headline font-bold text-night-sky mb-4">Minimal Downtime</h3>
+              <p className="font-body text-night-sky/70">
                 Efficient tournament structure guarantees at least 5 rounds of play in under 3 hours
               </p>
             </div>
             
             <div className="text-center">
-              <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-sand-yellow/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-10 h-10 text-sunset-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Prime Location</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl font-headline font-bold text-night-sky mb-4">Prime Location</h3>
+              <p className="font-body text-night-sky/70">
                 Beach Bakyard in Plano offers professional-quality sand courts and facilities
               </p>
             </div>
