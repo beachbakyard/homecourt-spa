@@ -164,41 +164,41 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isJunior, config })
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
-      <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+    <div className="max-w-4xl mx-auto bg-beach-white rounded-lg shadow-lg p-4 sm:p-6 md:p-8 m-4">
+      <h2 className="text-2xl sm:text-3xl font-headline font-bold text-center mb-6 md:mb-8 text-night-sky">
         {isJunior ? 'Junior' : 'Open'} Tournament Registration
       </h2>
 
-      <div className="mb-8 p-6 bg-blue-50 rounded-lg">
-        <h3 className="text-xl font-semibold mb-4 text-blue-800">Tournament Details</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-          <div>
-            <p><strong>Format:</strong> {config.format}</p>
-            <p><strong>Entry Fee:</strong> ${config.entryFee} per team</p>
-            <p><strong>Guaranteed Rounds:</strong> At least {config.guaranteedRounds}</p>
+      <div className="mb-6 md:mb-8 p-4 md:p-6 bg-teal-ocean/10 rounded-lg">
+        <h3 className="text-lg sm:text-xl font-headline font-semibold mb-3 md:mb-4 text-teal-ocean">Tournament Details</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 text-sm font-body">
+          <div className="space-y-2">
+            <p><strong className="text-night-sky">Format:</strong> <span className="text-night-sky/70">{config.format}</span></p>
+            <p><strong className="text-night-sky">Entry Fee:</strong> <span className="text-sunset-orange font-semibold">${config.entryFee} per team</span></p>
+            <p><strong className="text-night-sky">Guaranteed Rounds:</strong> <span className="text-night-sky/70">At least {config.guaranteedRounds}</span></p>
           </div>
-          <div>
-            <p><strong>Location:</strong> {config.location}</p>
-            <p><strong>Contact:</strong> {config.contactEmail}</p>
+          <div className="space-y-2">
+            <p><strong className="text-night-sky">Location:</strong> <span className="text-night-sky/70">{config.location}</span></p>
+            <p><strong className="text-night-sky">Contact:</strong> <span className="text-teal-ocean break-all">{config.contactEmail}</span></p>
           </div>
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+        <div className="grid grid-cols-1 gap-4 md:gap-6">
           {formFields.map(field => (
-            <div key={field.key}>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+            <div key={field.key} className="w-full">
+              <label className="block text-sm font-body font-medium text-night-sky mb-2">
                 {field.label}
-                {field.required && <span className="text-red-500">*</span>}
+                {field.required && <span className="text-sunset-orange ml-1">*</span>}
               </label>
               {field.type === 'textarea' ? (
                 <textarea
                   name={field.key}
                   value={formData[field.key as keyof JuniorFormFields] as string}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                    errors[field.key] ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-ocean text-base font-body touch-manipulation ${
+                    errors[field.key] ? 'border-sunset-orange' : 'border-night-sky/20'
                   }`}
                   rows={3}
                 />
@@ -208,29 +208,29 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isJunior, config })
                   name={field.key}
                   value={formData[field.key as keyof JuniorFormFields] as string}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                    errors[field.key] ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-ocean text-base font-body touch-manipulation min-h-[48px] ${
+                    errors[field.key] ? 'border-sunset-orange' : 'border-night-sky/20'
                   }`}
                 />
               )}
               {errors[field.key] && (
-                <p className="text-red-500 text-sm mt-1">{errors[field.key]}</p>
+                <p className="text-sunset-orange text-sm mt-1 font-body">{errors[field.key]}</p>
               )}
             </div>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-4 md:gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Home Court <span className="text-red-500">*</span>
+            <label className="block text-sm font-body font-medium text-night-sky mb-2">
+              Home Court <span className="text-sunset-orange ml-1">*</span>
             </label>
             <select
               name="homeCourt"
               value={formData.homeCourt}
               onChange={handleInputChange}
-              className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                errors.homeCourt ? 'border-red-500' : 'border-gray-300'
+              className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-ocean text-base font-body touch-manipulation min-h-[48px] ${
+                errors.homeCourt ? 'border-sunset-orange' : 'border-night-sky/20'
               }`}
             >
               <option value="">Select Home Court</option>
@@ -239,20 +239,20 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isJunior, config })
               ))}
             </select>
             {errors.homeCourt && (
-              <p className="text-red-500 text-sm mt-1">{errors.homeCourt}</p>
+              <p className="text-sunset-orange text-sm mt-1 font-body">{errors.homeCourt}</p>
             )}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Event Date <span className="text-red-500">*</span>
+            <label className="block text-sm font-body font-medium text-night-sky mb-2">
+              Event Date <span className="text-sunset-orange ml-1">*</span>
             </label>
             <select
               name="eventDate"
               value={formData.eventDate}
               onChange={handleInputChange}
-              className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                errors.eventDate ? 'border-red-500' : 'border-gray-300'
+              className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-ocean text-base font-body touch-manipulation min-h-[48px] ${
+                errors.eventDate ? 'border-sunset-orange' : 'border-night-sky/20'
               }`}
             >
               <option value="">Select Event Date</option>
@@ -261,49 +261,49 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ isJunior, config })
               ))}
             </select>
             {errors.eventDate && (
-              <p className="text-red-500 text-sm mt-1">{errors.eventDate}</p>
+              <p className="text-sunset-orange text-sm mt-1 font-body">{errors.eventDate}</p>
             )}
           </div>
         </div>
 
-        <div className="bg-yellow-50 p-6 rounded-lg">
-          <h4 className="font-semibold text-yellow-800 mb-3">Payment Information</h4>
-          <div className="text-sm text-yellow-700 space-y-1">
-            <p><strong>Entry Fee:</strong> ${config.entryFee} per team</p>
-            <p><strong>Payment Methods:</strong></p>
+        <div className="bg-sand-yellow/20 p-4 md:p-6 rounded-lg">
+          <h4 className="font-headline font-semibold text-night-sky mb-3">Payment Information</h4>
+          <div className="text-sm font-body text-night-sky/80 space-y-2">
+            <p><strong className="text-night-sky">Entry Fee:</strong> <span className="text-sunset-orange font-semibold">${config.entryFee} per team</span></p>
+            <p><strong className="text-night-sky">Payment Methods:</strong></p>
             <ul className="ml-4 space-y-1">
               {config.paymentMethods.map(method => (
                 <li key={method}>• {method}</li>
               ))}
             </ul>
-            <p className="font-semibold text-red-600 mt-3">
+            <p className="font-semibold text-sunset-orange mt-3 p-2 bg-sunset-orange/10 rounded">
               ⚠️ Your spot is not reserved until payment is received by Wednesday
             </p>
           </div>
         </div>
 
-        <div>
-          <label className="flex items-center space-x-3 cursor-pointer">
+        <div className="border border-teal-ocean/20 p-4 rounded-lg">
+          <label className="flex items-start space-x-3 cursor-pointer touch-manipulation">
             <input
               type="checkbox"
               name="waiver"
               checked={formData.waiver}
               onChange={handleInputChange}
-              className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              className="w-5 h-5 mt-0.5 text-teal-ocean border-night-sky/20 rounded focus:ring-teal-ocean flex-shrink-0"
             />
-            <span className="text-sm text-gray-700">
+            <span className="text-sm font-body text-night-sky leading-relaxed">
               I agree to the liability waiver and media release
-              <span className="text-red-500">*</span>
+              <span className="text-sunset-orange ml-1">*</span>
             </span>
           </label>
           {errors.waiver && (
-            <p className="text-red-500 text-sm mt-1">{errors.waiver}</p>
+            <p className="text-sunset-orange text-sm mt-2 font-body">{errors.waiver}</p>
           )}
         </div>
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors duration-300 font-semibold text-lg"
+          className="w-full bg-teal-ocean text-beach-white py-4 px-6 rounded-lg hover:bg-sunset-orange transition-colors duration-300 font-headline font-semibold text-lg touch-manipulation min-h-[48px] flex items-center justify-center"
         >
           Submit Registration
         </button>

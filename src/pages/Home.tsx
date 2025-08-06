@@ -5,29 +5,29 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-ocean via-sunset-orange to-sand-yellow text-night-sky py-20">
+      <section className="bg-gradient-to-br from-teal-ocean via-sunset-orange to-sand-yellow text-night-sky py-16 md:py-20 min-h-screen flex items-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-headline font-bold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-headline font-bold mb-4 md:mb-6 leading-tight">
             Home Court Series
           </h1>
-          <h2 className="text-2xl md:text-3xl mb-8 font-headline text-night-sky/80">
+          <h2 className="text-lg sm:text-xl md:text-2xl xl:text-3xl mb-6 md:mb-8 font-headline text-night-sky/80 leading-relaxed">
             Premier Beach Volleyball Tournaments
           </h2>
-          <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed font-body">
+          <p className="text-base sm:text-lg md:text-xl mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed font-body px-4">
             FIVB-Style King of the Court tournaments featuring maximum competition 
             with minimal downtime. Join us for high-level play in the Dallas-Fort Worth area.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
             <Link
               to="/tournaments"
-              className="bg-sand-yellow text-night-sky px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-sunset-orange hover:text-beach-white transition-colors duration-300"
+              className="bg-sand-yellow text-night-sky px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-headline font-bold text-base sm:text-lg hover:bg-sunset-orange hover:text-beach-white transition-colors duration-300 touch-manipulation min-h-[48px] flex items-center justify-center"
             >
               Open Tournaments
             </Link>
             <Link
               to="/juniors"
-              className="bg-sunset-orange text-beach-white px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-teal-ocean transition-colors duration-300"
+              className="bg-sunset-orange text-beach-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-headline font-bold text-base sm:text-lg hover:bg-teal-ocean transition-colors duration-300 touch-manipulation min-h-[48px] flex items-center justify-center"
             >
               Junior Tournaments
             </Link>

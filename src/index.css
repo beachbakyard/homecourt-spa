@@ -29,3 +29,105 @@ header {
   text-align: center;
   color: var(--white);
 }
+
+/* Mobile-first optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Touch targets minimum 48px */
+button, 
+input, 
+select, 
+textarea, 
+a {
+  min-height: 48px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent zoom on focus for iOS */
+input, select, textarea {
+  font-size: 16px;
+}
+
+/* Improve touch interactions */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+/* Focus states for accessibility */
+*:focus {
+  outline: 2px solid var(--teal-ocean);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --night-sky: #000000;
+    --cream: #ffffff;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Larger text for mobile */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Better spacing for mobile */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Mobile-friendly forms */
+  input, select, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  
+  /* Mobile buttons */
+  button {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet-specific optimizations */
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1200px) {
+  /* Desktop-specific optimizations */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
