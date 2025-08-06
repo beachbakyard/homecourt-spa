@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import Home from './pages/Home';
+import Tournament from './pages/Tournament';
 import Tournaments from './pages/Tournaments';
 import Juniors from './pages/Juniors';
 import Schedule from './pages/Schedule';
@@ -18,6 +19,7 @@ function App() {
         <main className="pt-16">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/tournament" element={<Tournament />} />
             <Route path="/tournaments" element={<Tournaments />} />
             <Route path="/juniors" element={<Juniors />} />
             <Route path="/schedule" element={<Schedule />} />

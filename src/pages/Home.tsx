@@ -20,16 +20,16 @@ const Home: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
             <Link
-              to="/tournaments"
+              to="/tournament"
               className="bg-sand-yellow text-night-sky px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-headline font-bold text-base sm:text-lg hover:bg-sunset-orange hover:text-beach-white transition-colors duration-300 touch-manipulation min-h-[48px] flex items-center justify-center"
             >
-              Open Tournaments
+              🏐 Register Now
             </Link>
             <Link
-              to="/juniors"
+              to="/schedule"
               className="bg-sunset-orange text-beach-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-headline font-bold text-base sm:text-lg hover:bg-teal-ocean transition-colors duration-300 touch-manipulation min-h-[48px] flex items-center justify-center"
             >
-              Junior Tournaments
+              📅 Book Lessons
             </Link>
           </div>
         </div>

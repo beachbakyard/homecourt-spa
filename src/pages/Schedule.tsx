@@ -205,10 +205,35 @@ const Schedule: React.FC = () => {
 
             {/* Booking Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6">Book Your Lesson</h2>
+              <div className="bg-beach-white rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
+                <h2 className="text-2xl sm:text-3xl font-headline font-bold text-night-sky mb-6">Book Your Lesson</h2>
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Calendly Integration */}
+                <div className="mb-8 p-4 bg-teal-ocean/10 rounded-lg">
+                  <h3 className="text-xl font-headline font-semibold text-teal-ocean mb-4">
+                    🗓️ Schedule Instantly with Calendly
+                  </h3>
+                  <div className="bg-beach-white rounded-lg overflow-hidden shadow-inner">
+                    <iframe 
+                      src="https://calendly.com/beachbakyard/lesson" 
+                      width="100%" 
+                      height="700" 
+                      frameBorder="0"
+                      title="Schedule Private Lesson"
+                      className="w-full"
+                    ></iframe>
+                  </div>
+                  <p className="text-sm font-body text-night-sky/70 mt-3 text-center">
+                    Select your preferred time slot and book instantly
+                  </p>
+                </div>
+
+                <div className="border-t border-night-sky/10 pt-6">
+                  <h3 className="text-xl font-headline font-semibold text-night-sky mb-4">
+                    Alternative: Manual Request Form
+                  </h3>
+                
+                  <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -397,7 +422,8 @@ const Schedule: React.FC = () => {
                   >
                     Request Lesson Booking
                   </button>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
